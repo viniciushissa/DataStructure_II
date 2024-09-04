@@ -2,14 +2,7 @@ import random
 import time
 
 def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-    else:
-        pivot = arr[len(arr) // 2]
-        left = [x for x in arr if x < pivot]
-        middle = [x for x in arr if x == pivot]
-        right = [x for x in arr if x > pivot]
-        return quicksort(left) + middle + quicksort(right)
+
 
 def generate_random_arr(size):
     return random.sample(range(size * 10), size)
@@ -23,7 +16,8 @@ def measure_func(func, data):
 
 size_arr = 10
 arr = generate_random_arr(size_arr)
+left = i for i in range(0, size_arr//2 - 1)
 print(arr)
-time = measure_func(quicksort, arr)
+time = measure_func(quicksort, arr, left, right)
 print(arr)
 print(f"Tempo de execução do Quicksort para {size_arr} elementos: {time:.5f} segundos")

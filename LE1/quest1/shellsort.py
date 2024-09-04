@@ -16,19 +16,6 @@ def shellsort(arr):
             arr[i] = key
         h = (h - 1)//3
 
-    # n = len(arr)
-    # gap = n // 3
-    
-    # while gap > 0:
-    #     for i in range(gap, n):
-    #         temp = arr[i]
-    #         j = i
-    #         while j >= gap and arr[j - gap] > temp:
-    #             arr[j] = arr[j - gap]
-    #             j -= gap
-    #         arr[j] = temp
-    #     gap //= 2
-
 def generate_random_arr(size):
     return random.sample(range(size * 10), size)
 
